@@ -1,4 +1,5 @@
-version: '3.7'
+version: '3.1'
+
 services:
   jenkins:
     image: jenkins/jenkins:lts
@@ -10,5 +11,6 @@ services:
     container_name: jenkins
     volumes:
       - ~/jenkins:/var/jenkins_home
+      - ~/jenkins/secrets:/var/jenkins_home/secrets
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
